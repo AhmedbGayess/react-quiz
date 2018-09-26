@@ -60,14 +60,27 @@ class CreateQuizPage extends React.Component {
             <div>
                 <h1>Quiz Creation</h1>
                 {
+                    this.state.quizCreationStarted && !this.state.quizCreated ? (<p>You can add as many questions as you like to your quiz. You can 
+                    also add as many answers as you want to each question, and you can also remove them. You have to submit at least 
+                    one question before submitting the quiz.</p>) : ""
+                }
+                
+                {
                     this.state.quizCreated ? (
                         <QuizCreatedPage />
                     ) : (
                             <div >
+
+                                {!this.state.quizCreationStarted &&
+                                    <StartQuizForm
+                                        onStartQuizSubmit={this.onStartQuizSubmit}
+                                    />}
+
+                                {this.state.questionsForms}
+
                                 {
                                     this.state.quizCreationStarted &&
                                     <div>
-                                        <p>You can add as many questions as you like to your quiz. You can also add as many answers as you want to each question, and you can also remove them. You have to submit at least one question before submitting the quiz.</p>
                                         <div className="question-form-btn-container question-form__container">
                                             <Button bsSize="lg" className="quiz-form-btn" onClick={this.HandleAddQuestion}>Add Question</Button>
                                             <Button bsSize="lg" className="quiz-form-btn" onClick={this.onQuizSubmit}>Submit Quiz</Button>
@@ -75,12 +88,6 @@ class CreateQuizPage extends React.Component {
                                     </div>
 
                                 }
-                                {!this.state.quizCreationStarted &&
-                                    <StartQuizForm
-                                        onStartQuizSubmit={this.onStartQuizSubmit}
-                                    />}
-
-                                {this.state.questionsForms}
 
                             </div>
                         )

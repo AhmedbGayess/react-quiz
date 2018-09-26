@@ -77,11 +77,16 @@ class QuestionForm extends React.Component {
 
                             <div className="question-form__container">
                                 <label><h3>Answers</h3></label>
-                                <p>Select on answer to choose it as the correct answer</p>
+                                <br />
+                                <span className="instructions">Select an answer to choose it as the correct one</span>
                                 {this.state.answersInputs.map((input, index) => (
                                     <FormGroup key={input} className="question-form__container">
                                         <Col sm={1}>
-                                            <input type="radio" name="answer" onChange={this.onChooseCorrectAnswer} required />
+                                            <input 
+                                                className="correct-answer" 
+                                                type="radio" name="answer" 
+                                                onChange={this.onChooseCorrectAnswer} required 
+                                            />
                                         </Col>
                                         <Col sm={10}>
                                             <FormControl

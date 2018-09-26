@@ -192,3 +192,12 @@ body {
 .quiz-name::first-letter {
   text-transform: capitalize;
 }
+
+.correct-answer {
+    transform: scale(1.5)
+}
+
+.instructions {
+  border-bottom: .5px solid #FD572E;
+  padding-bottom: 5px;
+}

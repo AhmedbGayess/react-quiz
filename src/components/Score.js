@@ -27,7 +27,7 @@ class Score extends React.Component {
         return (
             <div className="quiz-container">
                 <h3>Your Results</h3>
-                <p>You got {this.props.score} point out of {this.props.totalPoints}</p>
+                <p>You got {this.props.score} point(s) out of {this.props.totalPoints}</p>
                 {
                     this.state.scoreAdded ? 
                     (

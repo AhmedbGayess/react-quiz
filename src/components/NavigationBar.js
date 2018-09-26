@@ -18,7 +18,7 @@ class NavigationBar extends React.Component {
             <Navbar collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <Link to="/">Everybody Can QUIZ!</Link>
+                        <Link to="/">Everyone Can QUIZ!</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>

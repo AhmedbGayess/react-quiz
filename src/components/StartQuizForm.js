@@ -4,7 +4,7 @@ import { Form, FormGroup, FormControl, Col, ControlLabel, Button } from "react-b
 class StartQuizForm extends React.Component {
     state = {
         title: "",
-        difficulty: "easy"
+        difficulty: "Easy"
     }
     onTitleChange = (e) => {
         const title = e.target.value
